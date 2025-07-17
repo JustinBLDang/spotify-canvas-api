@@ -10,9 +10,10 @@ export const fetchCanvas = async (req, res) => {
   if (!canvasData) {
     return res.status(500).json({ error: 'Failed to fetch canvas data' });
   }
+
+  // Return data
   res.set({
     'Access-Control-Allow-Origin': '*'
   });
-  
   res.json(canvasData);
 };
