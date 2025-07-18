@@ -11,6 +11,8 @@ export const fetchCanvas = async (req, res) => {
     return res.status(500).json({ error: 'Failed to fetch canvas data' });
   }
 
+  canvasData.hasOwnProperty("canvasesList") ? res.status(204) : res.status(200);
+    
   // Return data
   res.set({
     'Access-Control-Allow-Origin': '*'
