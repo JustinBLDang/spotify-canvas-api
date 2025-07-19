@@ -10,8 +10,8 @@ export const fetchCanvas = async (req, res) => {
   if (!canvasData) {
     return res.status(500).json({ error: 'Failed to fetch canvas data' });
   }
-  console.log(canvasData);
-  canvasData.hasOwnProperty("canvasesList") ? res.status(204) : res.status(200);
+  
+  canvasData.hasOwnProperty("canvasesList") && canvasData.canvasesList.length > 0 ? res.status(200) : res.status(204);
     
   // Return data
   res.set({
