@@ -69,7 +69,7 @@ async function updateTOTPSecrets() {
 async function fetchSecretsFromGitHub() {
   try {
     const response = await axios.get(SECRETS_URL, {
-      timeout: 10000,
+      timeout: 15000,
       headers: {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
       }
@@ -96,7 +96,7 @@ function useFallbackSecret() {
   // Fallback to the original hardcoded secret
   // This secret will most likely fail because Spotify is rotating the secrets every couple of days
   // This is really just kept in here for reference
-  const fallbackData = [99, 111, 47, 88, 49, 56, 118, 65, 52, 67, 50, 104, 117, 101, 55, 94, 95, 75, 94, 49, 69, 36, 85, 64, 74, 60];
+  const fallbackData = [99,101,119,123,69,120,91,123,97,74,53,48,76,102,55,69,110,54];
   const totpSecret = createTotpSecret(fallbackData);
   
   currentTotp = new OTPAuth.TOTP({
@@ -106,7 +106,7 @@ function useFallbackSecret() {
     secret: totpSecret
   });
   
-  currentTotpVersion = "19"; // Fallback version
+  currentTotpVersion = "22"; // Fallback version
   console.log('Using fallback TOTP secret');
 }
 
