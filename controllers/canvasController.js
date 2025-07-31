@@ -1,6 +1,10 @@
 import { getCanvases } from '../services/spotifyCanvasService.js';
 
 export const fetchCanvas = async (req, res) => {
+  res.set({
+    'Access-Control-Allow-Origin': '*'
+  });
+  
   const { trackId } = req.query;
   if (!trackId) {
     return res.status(400).json({ error: 'Missing trackId parameter' });
@@ -19,8 +23,5 @@ export const fetchCanvas = async (req, res) => {
   }
 
   // Return data
-  res.set({
-    'Access-Control-Allow-Origin': '*'
-  });
   res.json(canvasData);
 };
