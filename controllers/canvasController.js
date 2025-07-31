@@ -11,8 +11,13 @@ export const fetchCanvas = async (req, res) => {
     return res.status(500).json({ error: 'Failed to fetch canvas data' });
   }
   
-  canvasData.hasOwnProperty("canvasesList") && canvasData.canvasesList.length > 0 ? res.status(200) : res.status(204);
-    
+  if(canvasData.hasOwnProperty("canvasesList") && canvasData.canvasesList.length > 0){
+    res.status(200);
+  } 
+  else {
+    res.status(204).json({ message: 'No canvas found for track' });
+  }
+
   // Return data
   res.set({
     'Access-Control-Allow-Origin': '*'
