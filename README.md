@@ -11,6 +11,7 @@ Shoutout to this helpful repo that inspired parts of this:
 https://github.com/bartleyg/my-spotify-canvas
 
 Thanks to Paxsenix for their work as well:
+
 Telegram: [@paxsenix0](https://t.me/paxsenix0)
 
 Email: alex24dzn@proton.me
