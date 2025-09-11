@@ -10,20 +10,17 @@ Unofficial API to fetch Spotify **Canvas video data** (the looping visual videos
 Shoutout to this helpful repo that inspired parts of this:
 https://github.com/bartleyg/my-spotify-canvas
 
----
-
-## License
-
-This project is licensed under the MIT license. see [LICENSE](https://github.com/Paxsenix0/Spotify-Canvas-API/blob/initial/LICENSE) for details.
-
----
-
-## Contact
-
+Thanks to Paxsenix for their work as well:
 Telegram: [@paxsenix0](https://t.me/paxsenix0)
 
 Email: alex24dzn@proton.me
 
 My Rest-API website: https://api.paxsenix.biz.id
+
+---
+
+## License
+
+This project is licensed under the MIT license. see [LICENSE](https://github.com/Paxsenix0/Spotify-Canvas-API/blob/initial/LICENSE) for details.
 
 ---
