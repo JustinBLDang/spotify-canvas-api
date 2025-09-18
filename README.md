@@ -16,7 +16,7 @@ Telegram: [@paxsenix0](https://t.me/paxsenix0)
 
 Email: alex24dzn@proton.me
 
-My Rest-API website: https://api.paxsenix.biz.id
+website: https://api.paxsenix.biz.id
 
 ---
 
