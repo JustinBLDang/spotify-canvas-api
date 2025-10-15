@@ -130,8 +130,6 @@ export async function getToken(reason = "init", productType = "mobile-web-player
     },
   });
 
-  console.log(response);
-
   return response.data?.accessToken;
 }
 
