@@ -96,7 +96,7 @@ function useFallbackSecret() {
   // Fallback to the original hardcoded secret
   // This secret will most likely fail because Spotify is rotating the secrets every couple of days
   // This is really just kept in here for reference
-  const fallbackData = [99,101,119,123,69,120,91,123,97,74,53,48,76,102,55,69,110,54];
+  const fallbackData = [79,109,69,123,90,65,46,74,94,34,58,48,70,71,92,85,122,63,91,64,87,87];
   const totpSecret = createTotpSecret(fallbackData);
   
   currentTotp = new OTPAuth.TOTP({
@@ -106,7 +106,7 @@ function useFallbackSecret() {
     secret: totpSecret
   });
   
-  currentTotpVersion = "22"; // Fallback version
+  currentTotpVersion = "60"; // Fallback version
   console.log('Using fallback TOTP secret');
 }
 
@@ -129,6 +129,8 @@ export async function getToken(reason = "init", productType = "mobile-web-player
       'Cookie': `sp_dc=${SP_DC}`,
     },
   });
+
+  console.log(response);
 
   return response.data?.accessToken;
 }
